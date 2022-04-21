@@ -16,27 +16,31 @@ public class SpiralMatrix {
     
     */
 
-    int [][] espiral = {{1,2,3},{4,5,6},{7,8,9}};
+    int [][] espiral = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
 
     public int[] RetornarSpiral(){
         
         int[] espiralFinal = new int[espiral.length];
         int contador = 0;
+
+        int ancho = 0;
+        int alto = 0;
         
         //pintamos
         for (int i = 0; i < espiral.length; i++) {
             for (int j = 0; j < espiral[i].length; j++) {
-                System.out.print(espiral[i][j]);
+                System.out.print(espiral[i][j] + "\t");
+                    if (i == 0){
+                        ancho++;
+                    }
             }    
                 System.out.println();
+                alto++;
         }
 
-        for (int i = 0; i < espiral.length; i++) {
-            for (int j = 0; j < espiral[i].length; j++) {
-                
-            }    
-                System.out.println();
-        }
+        System.out.println("ancho "+ancho+" alto "+alto);
+
+        
 
         return null;
     }
