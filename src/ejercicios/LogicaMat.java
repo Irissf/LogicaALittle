@@ -35,8 +35,25 @@ public class LogicaMat {
 
 
     //SIGUIENTE dada dos listas ordenar sus datos numericos en una sola lista
-    public int[] OrdenarListas(int[]lista1 ,int[] lsita2){
-        return lista1;    
+    public ArrayList<Integer> OrdenarListas(int[]lista1 ,int[] lista2){
+        ArrayList<Integer> nuevaLista = new ArrayList<>();
+        
+        for (Integer num : lista1) {
+            nuevaLista.add(num);
+        }
+       
+        for (int i = 0; i < lista2.length; i++) {
+            System.out.println(lista2[i]);
+            for (int j = 0; j < nuevaLista.size(); j++) {
+                if(lista2[i] <= nuevaLista.get(j) ){
+                    System.out.println("menor o igual que "+nuevaLista.get(j));
+                    nuevaLista.add(j,lista2[i]);
+                    break;
+                }   
+            }
+        }
+
+        return nuevaLista;    
     }
 
 }
