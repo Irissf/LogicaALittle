@@ -43,10 +43,10 @@ public class LogicaMat {
         }
        
         for (int i = 0; i < lista2.length; i++) {
-            System.out.println(lista2[i]);
+            // System.out.println(lista2[i]);
             for (int j = 0; j < nuevaLista.size(); j++) {
                 if(lista2[i] <= nuevaLista.get(j) ){
-                    System.out.println("menor o igual que "+nuevaLista.get(j));
+                    // System.out.println("menor o igual que "+nuevaLista.get(j));
                     nuevaLista.add(j,lista2[i]);
                     break;
                 }   
